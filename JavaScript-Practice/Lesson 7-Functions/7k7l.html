@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7k7l</title>
+
+    <style> 
+
+    </style>
+
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button onclick="
+      console.log(`Cart quantity : ${cartQuantity}`)
+      ">Cart Quantity</button>
+
+    <!-- vvv This code is 5j add 6k excersise. vvv -->
+    <button onclick="
+      updateCartQuantity (1)
+    ">Add to Cart</button>
+
+    <button onclick="
+    updateCartQuantity (2)
+    ">+2</button>
+
+    <button onclick="
+    updateCartQuantity (3)
+    ">+3</button>
+
+    <!-- vvv This code is 5h add 6k excersise. vvv -->
+    <button onclick="
+    updateCartQuantity (4)
+    ">+4</button>
+
+    <button onclick="
+    updateCartQuantity (5)
+    ">+5</button>
+
+    <!-- ^^^ This code is 5h add 6k excersise. ^^^ -->
+
+    <!-- vvv This code is 5i5j5k add 6l excersise. vvv -->
+    <button onclick="
+      updateCartQuantity (-1)
+      ">Remove from cart</button>
+
+    <button onclick="
+    updateCartQuantity (-2)
+    ">-2</button>
+
+    <button onclick="
+    updateCartQuantity (-3)
+    ">-3</button>    
+    <!-- ^^^ This code is 5i5j5k add 6l excersise. ^^^ -->
+
+    <button onclick=" 
+      cartQuantity = 0;
+      console.log(`Cart was reset.`);
+      console.log(`Cart quantity : ${cartQuantity}`);
+    ">Reset Cart</button>
+
+    <script>
+      let cartQuantity = 0;
+    /* This is my method-7k.
+      function updateCartQuantity (value) {
+        if (value > 0) {
+        if (cartQuantity + value > 10) {
+          alert('The cart is full.');
+        } else {
+          cartQuantity += value;
+        } 
+          console.log(`Cart quantity : ${cartQuantity}`);
+
+        } else if (value <= 0) {
+          if (cartQuantity + value < 0) {
+          alert('Not Enouth Items in the Cart');
+        } else {
+          cartQuantity += value;
+        } 
+          console.log(`Cart quantity : ${cartQuantity}`);
+        }
+      }
+     */  
+
+    /* This method is the course's-7k, is more cleaner than mine.  
+      function updateCartQuantity (change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full.');
+        } else if (cartQuantity + change < 0) {
+          alert('Not Enouth Items in the Cart');
+        } else {
+          cartQuantity += change;
+          console.log(`cartQuantity : ${cartQuantity}`);
+        }
+      }
+    */
+
+   // This is 7l, it is more cleaner than 7k by using 'return', it is callde early return statement.
+        function updateCartQuantity (change) {
+          if (cartQuantity + change > 10) {
+            alert('The cart is full.')
+            return;
+          } 
+          if (cartQuantity + change < 0) {
+            alert('Not Enouth Items in the Cart')
+            return;
+          } 
+          cartQuantity += change;
+          console.log(`cartQuantity : ${cartQuantity}`);
+        }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+
+      body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .js-display {
+        color: white;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .button {
+        background-color: gray;
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        margin-right: 3px;
+        margin-bottom: 4px;
+        border-radius: 30px;
+        font-size: 20px;
+        font: bold;
+        cursor: pointer;
+      }
+      .operator-button {
+        background-color: orange;
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        margin-right: 3px;
+        margin-bottom: 4px;
+        border-radius: 30px;
+        font-size: 20px;
+        font: bold;
+        cursor: pointer;
+      }
+      .clear-button {
+        background-color: gray;
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        margin-right: 3px;
+        margin-bottom: 4px;
+        border-radius: 30px;
+        font-size: 17px;
+        font: bold;
+        cursor: pointer;
+      }
+  

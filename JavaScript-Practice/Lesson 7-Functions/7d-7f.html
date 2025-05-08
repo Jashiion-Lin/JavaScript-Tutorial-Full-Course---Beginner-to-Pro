@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7d-7f</title>
+  </head>
+  <body>
+    <script>
+      /*  this is my method
+      function covertToFahrenheit(celsius) {
+        const fahrnheit =  celsius * 9/5 + 32;
+        console.log(fahrnheit)
+        return;
+      }
+       covertToFahrenheit(5)
+      */
+
+       function covertToFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+       }
+       console.log(covertToFahrenheit(25))
+
+       /* This is the answer of 7e.*/
+       function covertToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+       }
+       console.log(covertToCelsius(41));
+
+       /* This is my answer of 7f.
+       function covertTemperature(degreees,unit) {
+        if (unit === 'C') {
+          const fahrenheit = covertToFahrenheit(degreees);
+        } else if (unit === 'F') {
+          const celsius = covertToCelsius(degreees);       
+        } 
+       }
+      console.log(covertTemperature(5,'C'));
+      console.log(covertTemperature(41,'F'));
+      */
+  
+       /* This is the course's answer of 7f.*/
+       function covertTemperature(degreees,unit) {
+        if (unit === 'C') {
+          const result = covertToFahrenheit(degreees);
+          return console.log(`${result}F`);
+        } else if (unit === 'F') {
+          const result = covertToCelsius(degreees);
+          return console.log(`${result}C`);
+        }
+       }
+       covertTemperature(5,"C")
+       covertTemperature(41,'F')
+
+
+    </script>
+  </body>
+</html>

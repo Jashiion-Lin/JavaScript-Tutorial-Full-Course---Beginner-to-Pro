@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6f-6j-useIfStatement.html</title>
+  </head>
+  <body>
+<!--Bellow is the cause's method.-->
+    <button onclick="
+      const randomNumber = Math.random();
+      let computerMove = '';
+      if (randomNumber < 0.5) {
+        computerMove = 'heads';
+      } else {
+        computerMove = 'tails';
+      } console.log(computerMove);
+
+      const guess = 'heads';
+      if (guess === computerMove) {
+        console.log('You win.');
+      } else {
+        console.log('You lose.');
+      }
+    ">Guess heads</button>
+
+<!--Here is my method.-->
+    <button onclick="
+      const randomNumber = Math.random();
+      let computerMove = '';
+      if (randomNumber >= 0 && randomNumber < 0.5) {
+        computerMove = 'heads';
+      } else {
+        computerMove = 'tails';
+      } console.log(`Computer picked ${computerMove}`);
+
+      let result = '';
+      if (computerMove === 'heads') {
+        result = 'You lose';
+      } else {
+        result = 'You win';  
+      } console.log(result);
+      alert(`You Guess tails.Computer picked ${computerMove}. ${result}.`)
+    ">Guess tails</button>
+
+    <script>
+
+    </script>
+  </body>
+
+</html>

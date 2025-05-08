@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+  </head>
+  <body>
+    <script>
+      let index = -1;
+     // const array = [];
+     // const word = '';
+      function findIndex(array,word) {
+        for (let i = 0; i < array.length; i++) {
+          if (word === array[i]) {
+            index = i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+
+      findIndex(['green','red','blue','red'],'red')
+
+      //or 
+
+      function findIndexOr(array,word) {
+        for (let i = 0; i < array.length; i++) {
+          if (word === array[i]) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      console.log(findIndexOr(['green','red','blue','red'],'red'))
+
+    </script>
+  </body>
+</html>

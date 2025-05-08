@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9d-9f</title>
+  </head>
+  <body>
+    <input placeholder="Name" class="js-name-input" //9e onkeydown="
+       handleNameKeydown(); 
+    ">
+    
+    <button class="js-submit" onclick="
+      //method1();
+      method2();
+    ">Submit</button>
+
+    <p class="js-message"></p>
+
+    <script>
+      // 9d
+      function method1() {
+        document.querySelector('.js-message')
+          .innerHTML = `Your name is: ${document.querySelector('.js-name').value}`;
+      }
+      function method2() {
+        const inputElement = document.querySelector('.js-name-input');
+        document.querySelector('.js-message')
+          .innerHTML = `Yout name is: ${inputElement.value}`;
+      }
+
+      // 9e
+      function handleNameKeydown() {
+        if (event.key === 'Enter') {
+          //method1();
+          method2();
+        }
+      }
+    </script>
+  </body>
+</html>

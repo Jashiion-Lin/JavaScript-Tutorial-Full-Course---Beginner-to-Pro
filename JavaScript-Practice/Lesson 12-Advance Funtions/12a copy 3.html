@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add</title>
+  </head>
+
+  <body>
+    <button onclick="
+      message++;
+      displayNote();
+    ">Add</button>
+
+    <button onclick="
+      if (message > 0) {
+        message--;
+      } 
+      if (message === 0) {
+        stop();
+      }
+    ">Remove</button>
+
+    <script>
+      let message = 2;
+      let intervalId;
+      let isdisplaying;
+
+      displayNote()
+      function displayNote() {
+        if (isdisplaying) {
+          return;
+        }
+        isdisplaying = true;
+
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${message}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        },1000)
+      }
+    
+      function stop() {
+        isdisplaying = false;
+        clearInterval(intervalId);
+        document.title = 'App'; 
+      }
+
+    </script>
+  </body>
+</html>

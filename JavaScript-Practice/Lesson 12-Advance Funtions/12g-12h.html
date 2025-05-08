@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="js-addButton" onclick="
+      add();
+    ">Add</button>
+    <button class="js-removeButton">Remove</button>
+    <script>
+      let message = 2;
+      let intervalId;
+      if (message > 0) {
+        setInterval(() => {
+          if (document.title === 'App') {
+            document.title = `(${message}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      } else if (message === 0) {
+        document.title = 'App';
+        clearInterval(intervalId);
+      }
+
+      function add() {
+        message++;
+      }
+
+      // 12q
+      document.querySelector('.js-removeButton')
+        .addEventListener('click',() => {
+          if (message > 0) {
+            message--;}
+        })
+
+      
+    </script>
+  </body>
+</html>

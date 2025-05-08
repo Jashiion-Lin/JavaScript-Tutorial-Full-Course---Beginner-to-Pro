@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-paper-scissors Add Auto Play</title>
+    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+  </head>
+  <body>
+    <p class="gameName">Rock Paper Scissors</p>
+
+    <button class="move-button js-player-rock"><img src="images/rock-emoji.png" class="move-icon"></button>
+
+    <button class="move-button js-player-paper"><img src="images/paper-emoji.png" class="move-icon"></button>
+
+    <button class="move-button js-player-scissors"><img src="images/scissors-emoji.png" class="move-icon"></button>  
+
+    <p class="js-result result" ></p>
+    <P class="js-move"></P>
+    <p class="js-score score"></p>
+
+    <button class="reset-button" onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    ">Reset Score</button>
+
+    <button class="autoPlay-button">Auto Play</button>
+ 
+
+    <script src="scripts/12-rock-paper-scissors.js"></script>
+
+    <p> <br><br>Click here to see the final version of the project.
+    </p>
+ 
+  </body>
+
+</html>

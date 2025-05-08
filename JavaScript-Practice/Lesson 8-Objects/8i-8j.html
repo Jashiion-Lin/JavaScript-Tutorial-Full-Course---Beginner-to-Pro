@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8i-8j.html</title>
+  </head>
+  <body>
+    <!-- 8i -->  
+    <button onclick="
+      /* const randomNumber = Math.random();*/
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      // 8j
+      let score = {
+      wins: 0,
+      losses: 0
+      } 
+
+
+      // 8i and 8j
+      function playGame (guess) {
+        const computerMove = Math.random() < 0.5 ? 'heads' : 'tails';
+        console.log(`Computer random ${computerMove}`);
+        console.log(guess === computerMove ? 'You win.' : 'You lose.');
+
+
+
+        if (guess === computerMove) {
+           score.wins++ ;
+        } else{
+           score.losses++;
+        }
+      /*  If put the 8j in the function. So every time after running the function, the function will record one time and then next the score will be clear to zero. So we put the score outside function and in the page. So after each click the function, there will be record in the page and can be add next running the function. except to refresh or close the page.
+      let score = {
+        wins: 0,
+        losses: 0
+      }            */
+        console.log(score);
+      }
+
+    </script>
+  </body>
+</html>

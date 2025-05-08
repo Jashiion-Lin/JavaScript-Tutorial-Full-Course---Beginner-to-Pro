@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+  </head>
+  <body>
+    <button class="js-button" onclick="
+      updateButton();
+    ">Start</button>
+
+    <!--12p-->
+    <button class="js-button-12p">Start 12p</button>
+ 
+
+    <script>
+      // Grouping the JavaScript code into a function
+      // is optional, but it is a bit cleaner.
+      function updateButton() {
+        const button = document.querySelector('.js-button');
+        setTimeout(function() {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      // 12 d  
+          button.innerHTML = 'Loading...';
+      }
+
+      
+
+      /* Or
+      function updateButton() {
+        const button = document.querySelector('.js-button');
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+      */ 
+
+      // 12p 12q
+      document.querySelector('.js-button-12p')
+        .addEventListener('click',() => {
+        const button12p = document.querySelector('.js-button-12p');
+        setTimeout(() => {
+          button12p.innerHTML = 'Finished'
+        },1000);
+        button12p.innerHTML = 'loading...'
+      }
+)
+     
+
+    </script>
+  </body>
+</html>

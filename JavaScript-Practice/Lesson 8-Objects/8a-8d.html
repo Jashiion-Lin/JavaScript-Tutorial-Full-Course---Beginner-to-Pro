@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 8a
+      const product = {
+        name: 'basketball',
+        price: 2095
+      }
+      console.log(product);
+      // 8b
+      product.price += 500;
+      console.log(product);
+      // 8c
+      product['delivery-time'] = '3 days';
+      console.log(product);
+
+      /* 8d  this is my method, it is wrong.
+       function comparePrice(product1,product2) {
+        if (product1.price < product2.price) {
+          return product1.name
+        } else if (product1.price > product2.price) {
+          return product2.name
+        }
+        const product1 = {
+          name: 'basketball',
+          price: 2095
+        }      
+        const product2 = {
+          name: 'socks',
+          price: 500
+        }
+      } */ 
+      // 8d
+      function comparePrice(product1,product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        } else {
+          return product2;
+        }
+      }
+      const product1 = {
+        name: 'basketball',
+        price: 2094
+      }
+      const product2 = {
+        name: 'socks',
+        price: 500
+      }
+      console.log(comparePrice(product1,product2));
+
+      // 8e
+      function isSameProduct(product1,product2) {
+        if (product1 === product2) {
+        return true;
+        } else {
+        return false;
+        }
+      }
+
+      JSON.stringify(product1);
+      JSON.stringify(product2);
+      console.log(isSameProduct (product1,product2));
+
+
+
+    </script>
+  </body>
+</html>

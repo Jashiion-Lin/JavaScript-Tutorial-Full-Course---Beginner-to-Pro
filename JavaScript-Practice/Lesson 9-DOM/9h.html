@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <input placeholder="Type something" class="js-input" onkeyup="
+      /* This method is okay too.
+      document.querySelector('.js-display')
+      .innerHTML = document.querySelector('.js-input').value; 
+      */
+
+      const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-display')
+          .innerHTML = inputElement.value;
+    ">
+    <p class="js-display"></p>
+    <script>
+      /*  This method is not correct because if you use mesh function there will be some problem
+      function type () {
+        document.querySelector('.js-display')
+          .innerHTML = document.querySelector('.js-type').value;
+      } */
+    </script>
+  </body>
+</html>

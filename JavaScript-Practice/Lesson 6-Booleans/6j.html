@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6j.html</title>
+  </head>
+  <body>
+    <button onclick="
+      /* const randomNumber = Math.random();*/
+      computerMove = Math.random() < 0.5 ? 'heads' : 'tails';
+      console.log(computerMove);
+      const guess = 'heads'
+      console.log(computerMove === guess ? 'You win.' : 'You lose.');
+    ">heads</button>
+
+    <button onclick="
+      computerMove = Math.random() < 0.5 ? 'heads' : 'tails';
+      console.log(computerMove);     
+      console.log('tails' === computerMove ? 'You win.' : 'You lose.');
+    ">tails</button>
+
+    <script>
+
+    </script>
+  </body>
+</html>

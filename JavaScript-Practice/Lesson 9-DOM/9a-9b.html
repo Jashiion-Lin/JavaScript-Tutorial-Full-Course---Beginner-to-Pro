@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9a-9b</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-second-button">9b</button>
+    <script>
+      console.log(document.querySelector('button'));
+
+      console.log(document.querySelector('.js-second-button'));
+      document.querySelector('.js-second-button')
+        .innerHTML = '9b done!'
+      console.log(document.querySelector('.js-second-button'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7g</title>
+  </head>
+  <body>
+    <script>
+      // This is my method. In here, we should not use console.log in the function state because we just need to return the value or return the parameters. and then we just the console the parameter because in the calculation or running the code, we don't need to consloe the parameters.
+      function covertLength(length,from,to) {
+        if (from === 'miles') {
+          if (to === 'km') {
+            console.log(`${length *= 1.6} ${to}`); 
+          } else if (to === 'miles') {
+            console.log(`${length} ${to}`);
+          } 
+        } else if (from === 'km') {
+          if (to === 'miles') {
+           console.log(`${length /= 1.6} ${to}`); 
+          } else if (to === 'km') {
+           console.log(`${length} ${to}`);
+          }
+        }
+      }
+      covertLength(30,'miles','km')
+      covertLength(32,'km','miles')
+      covertLength(90,'km','km')
+      covertLength(60,'miles','miles')
+      
+     // This is the causes method.And this is the correct method.
+      function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} km`;
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));      
+      console.log(convertLength(50, 'miles', 'miles'));      
+
+    </script>
+  </body>
+</html>

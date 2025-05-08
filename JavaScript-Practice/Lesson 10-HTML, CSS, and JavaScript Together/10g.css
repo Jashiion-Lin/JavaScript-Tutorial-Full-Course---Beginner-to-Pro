@@ -1,0 +1,15 @@
+.toggle-button {
+  background-color: gainsboro;
+  border: none;
+  padding: 10px;
+  font: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+
+ 

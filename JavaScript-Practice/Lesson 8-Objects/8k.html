@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8k.html</title>
+  </head>
+  <body>
+    <!-- 8i -->  
+    <button onclick="
+      /* const randomNumber = Math.random();*/
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      /*  
+      let score = {
+      wins: 0,
+      losses: 0
+      } */
+      // JSON.parse(localStorage.getItem(score)) || ''; // --this is wrong
+
+      // We can use const here since score is a reference
+      // so we can modify it even if it uses const.      
+      const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+        }
+
+      function playGame (guess) {
+        const computerMove = Math.random() < 0.5 ? 'heads' : 'tails';
+        console.log(`Computer random ${computerMove}`);
+        console.log(guess === computerMove ? 'You win.' : 'You lose.');
+        if (guess === computerMove) {
+           score.wins++ ;
+        } else{
+           score.losses++;
+        }
+        console.log(score);
+        // 8k
+        localStorage.setItem('score',JSON.stringify(score));
+      }   
+    </script>
+  </body>
+</html>

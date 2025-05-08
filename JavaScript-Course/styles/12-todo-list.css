@@ -1,0 +1,37 @@
+.js-name-input {
+  height: 32px;
+}
+.js-date {
+  height: 30px;
+  
+}
+.js-add {
+  
+  background-color: rgb(11, 192, 11);
+  border: none;
+  padding-inline: 30px;
+  color: white;
+  cursor: pointer;
+}
+.js-delete {
+  height: 36px;
+  background-color: red;
+  border: none;
+  padding-inline: 30px;
+  color: white;
+  cursor: pointer;
+
+}
+.todo-grid,
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 300px 200px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+  
+}
+.todo-input-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}

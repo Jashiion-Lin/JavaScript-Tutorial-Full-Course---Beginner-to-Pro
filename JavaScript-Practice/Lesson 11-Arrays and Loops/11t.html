@@ -1,0 +1,32 @@
+JavaScript-Practice/Lesson 11-Arrays and Loops/11o.html<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+  </head>about:blank#blocked
+  <body>
+    <script>
+      function removeEgg(foods) {
+        
+        const reversedFoods = foods.reverse();
+        const result = [];
+        let eggRemove = 0;
+        for (let i = 0; i < reversedFoods.length ; i++) {
+          const food = reversedFoods[i];
+          if (food === 'egg' && eggRemove < 2) {
+            eggRemove++;
+            continue;
+            } 
+            result.push(food);
+          } 
+
+          return result.reverse();
+        }
+      
+      console.log(removeEgg(['egg','apple','egg','egg','ham']))
+      
+
+    </script>
+  </body>
+</html>
